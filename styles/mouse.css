@@ -1,4 +1,3 @@
-html * {font-family: Classyvogue;}
 html {scroll-behavior: smooth;}
 .mouse {position: fixed; pointer-events: none; transition: 0.1s;}
 .mouse img {

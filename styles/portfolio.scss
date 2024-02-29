@@ -1,16 +1,14 @@
 @import 'common';
 
-html, body {background-color: #F5F5F0;}
-
+html, body {background-color: #F5F5F5;}
 main{
     section{padding: 30px;}
     .intro{
         padding: 0;
         h1{
-            font-family: Noto Sans KR;
-            font-weight: 900;
             font-size: 5rem;
             text-align: center;
+            font-family: hoves;
         }
         .mainTitle{
             font-family: Classyvogue;
@@ -24,13 +22,25 @@ main{
                 animation: textLoop 20s infinite linear;
             }
         }
-        .profile{
+        .name{
             @include flex-row-btw-ct;
             padding: 30px 50px;
-            span{
+            a{
                 font-size: 2rem;
                 font-weight: 600;
             }
+        }
+        .introContents{
+            background-color: #222;
+            padding: 50px;
+            h2{
+                color: #fff;
+            }
+            p,a{
+                color: #fff;
+                font-size: 2rem;
+            }
+            a{display: block;}
         }
     }
     .works{
@@ -38,28 +48,37 @@ main{
         h2{
             font-size: 5rem;
             border-bottom: 2px solid #222;
+            // font-family: hoves;
         }
         .workList{
+            *{font-family: hoves;}
             li{
                 border-bottom: 2px solid #222;
                 margin-bottom: 50px;
                 padding: 30px 0;
                 display: flex;
                 justify-content: space-between;
+                gap: 30px;
 
                 .worksDescription{
                     width: 100%;
-                    margin-right: 30px;
                     @include flex-row-btw-ct;
                     .descriptionLeft{
-                        // width: 100%;
                         display: flex;
                         flex-flow: column nowrap;
                         justify-content: space-around;
                         height: 100%;
-                        .completionDate{font-size: 2.5rem;}
+                        .completionDate{
+                            font-size: 3rem;
+                        }
                         .skillInfo{
-                            font-size: 1rem;
+                            font-size: 0.938rem;
+                            font-weight: lighter;
+                            font-weight: 500;
+                            em{
+                                font-weight: 600;
+                                line-height: 2rem;
+                            }
                         }
                         .worksTitle{
                             font-size: 4.375rem;
@@ -72,7 +91,7 @@ main{
                         justify-content: space-around;
                         height: 100%;
                         .completionYear{font-size: 1.125rem;}
-                        .worksLink{font-size: 1.125rem;}
+                        .worksLink{font-size: 1.25rem;}
                     }
                 }
             }
