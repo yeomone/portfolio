@@ -1,0 +1,12 @@
+html * {font-family: Classyvogue;}
+html {scroll-behavior: smooth;}
+html, body {background-color: #f5f5f5;}
+.mouse {position: fixed; pointer-events: none; transition: 0.1s;}
+.mouse img {
+    width: 40px;
+    animation: rotate 5s infinite linear;
+}
+@keyframes rotate {
+    0% {transform: translate(-50%, -50%) rotate(0);}
+    100% {transform: translate(-50%, -50%) rotate(360deg);}
+}
