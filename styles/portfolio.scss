@@ -1,0 +1,81 @@
+@import 'common';
+
+html, body {background-color: #F5F5F0;}
+
+main{
+    section{padding: 30px;}
+    .intro{
+        padding: 0;
+        h1{
+            font-family: Noto Sans KR;
+            font-weight: 900;
+            font-size: 5rem;
+            text-align: center;
+        }
+        .mainTitle{
+            font-family: Classyvogue;
+            border: 3px solid #222;
+            border-left: 0;
+            border-right: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            p{
+                font-size: 5rem;
+                animation: textLoop 20s infinite linear;
+            }
+        }
+        .profile{
+            @include flex-row-btw-ct;
+            padding: 30px 50px;
+            span{
+                font-size: 2rem;
+                font-weight: 600;
+            }
+        }
+    }
+    .works{
+        padding: 30px;
+        h2{
+            font-size: 5rem;
+            border-bottom: 2px solid #222;
+        }
+        .workList{
+            li{
+                border-bottom: 2px solid #222;
+                margin-bottom: 50px;
+                padding: 30px 0;
+                display: flex;
+                justify-content: space-between;
+
+                .worksDescription{
+                    width: 100%;
+                    margin-right: 30px;
+                    @include flex-row-btw-ct;
+                    .descriptionLeft{
+                        // width: 100%;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: space-around;
+                        height: 100%;
+                        .completionDate{font-size: 2.5rem;}
+                        .skillInfo{
+                            font-size: 1rem;
+                        }
+                        .worksTitle{
+                            font-size: 4.375rem;
+                        }
+                    }
+                    .descriptionRight{
+                        text-align: right;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: space-around;
+                        height: 100%;
+                        .completionYear{font-size: 1.125rem;}
+                        .worksLink{font-size: 1.125rem;}
+                    }
+                }
+            }
+        }
+    }
+}

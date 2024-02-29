@@ -1,0 +1,12 @@
+@mixin flex-row-btw-ct{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex-row-ct-ct{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
