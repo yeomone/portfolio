@@ -1,5 +1,6 @@
 html, body {
   background-color: #F5F5F5;
+  -webkit-scrollbar: none;
 }
 
 main section {
@@ -38,38 +39,58 @@ main .intro .name a {
 }
 main .intro .introContents {
   background-color: #222;
-  padding: 50px;
+  padding: 80px 50px;
 }
 main .intro .introContents h2 {
   color: #fff;
+  font-size: 5rem;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 20px;
 }
-main .intro .introContents p, main .intro .introContents a {
+main .intro .introContents a, main .intro .introContents p {
   color: #fff;
   font-size: 2rem;
 }
-main .intro .introContents a {
-  display: block;
+main .intro .introContents .contact {
+  text-align: right;
+  margin-top: 40px;
+}
+main .intro .introContents .contact a {
+  margin-left: 15px;
+}
+main .intro .introContents .contact a:hover {
+  border-bottom: 1px solid #fff;
 }
 main .works {
   padding: 30px;
+  padding-bottom: 0;
 }
 main .works h2 {
   font-size: 5rem;
+  border-bottom: 2px solid #222;
+}
+main .works .workList {
+  overflow-x: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: left;
   border-bottom: 2px solid #222;
 }
 main .works .workList * {
   font-family: hoves;
 }
 main .works .workList li {
-  border-bottom: 2px solid #222;
-  margin-bottom: 50px;
   padding: 30px 0;
   display: flex;
   justify-content: space-between;
   gap: 30px;
+  width: 100vw;
+  margin-right: 50px;
+}
+main .works .workList li:last-child {
+  margin-right: 0;
 }
 main .works .workList li .worksDescription {
-  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -108,4 +129,11 @@ main .works .workList li .worksDescription .descriptionRight .completionYear {
 }
 main .works .workList li .worksDescription .descriptionRight .worksLink {
   font-size: 1.25rem;
+}
+main .contact {
+  padding-top: 0;
+}
+main .contact h2 {
+  font-size: 5rem;
+  margin-bottom: 30px;
 }/*# sourceMappingURL=portfolio.css.map */
