@@ -65,7 +65,7 @@ main{
                         border-bottom: 2px solid #fff;
                         // z-index: -1;
                         transform: scaleX(0);
-                        transform-origin: bottom right;
+                        transform-origin: center;
                         transition: transform 0.3s linear;
                     }
                     &:hover::before {
@@ -144,7 +144,6 @@ main{
                         .worksTitle{
                             font-size: 4.375rem;
                             .gitLink{
-                                // margin-left: 10px;
                                 font-size: 1rem;
                                 position: relative;
                                 display: inline-block;

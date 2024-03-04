@@ -71,7 +71,7 @@ main .intro .introContents .profileContainer a::before {
   inset: 0 0 0 0;
   border-bottom: 2px solid #fff;
   transform: scaleX(0);
-  transform-origin: bottom right;
+  transform-origin: center;
   transition: transform 0.3s linear;
 }
 main .intro .introContents .profileContainer a:hover::before {
