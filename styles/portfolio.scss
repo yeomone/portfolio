@@ -2,8 +2,7 @@
 
 html, body {
     background-color: #F5F5F5;
-    -webkit-scrollbar:none;
-    overflow-x: hidden;
+    ::-webkit-scrollbar{display: none;}
 }
 main{
     section{padding: 30px;}
