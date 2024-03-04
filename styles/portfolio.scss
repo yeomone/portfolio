@@ -106,6 +106,7 @@ main{
                 }
                 .worksDescription{
                     @include flex-row-btw-ct;
+                    width: 100%;
                     .descriptionLeft{
                         display: flex;
                         flex-flow: column nowrap;
@@ -115,16 +116,44 @@ main{
                             font-size: 3rem;
                         }
                         .skillInfo{
-                            font-size: 0.938rem;
                             font-weight: lighter;
                             font-weight: 500;
-                            em{
-                                font-weight: 600;
-                                line-height: 2rem;
+                            p{
+                                line-height: 1.5;
+                                em{
+                                    font-weight: 600;
+                                    font-size: 0.938rem;
+                                }
+                                .gitLink{
+                                    margin-left: 10px;
+                                    font-size: 1.125rem;
+                                    position: relative;
+                                    display: inline-block;
+                                    background-image: url(../images/pencil.png);
+                                    background-size: 90%;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    padding: 20px;
+                                }
+                            }
+                            .devInfo{
+                                margin-top: 10px;
+                                font-size: 0.938rem;
                             }
                         }
                         .worksTitle{
                             font-size: 4.375rem;
+                            .gitLink{
+                                // margin-left: 10px;
+                                font-size: 1rem;
+                                position: relative;
+                                display: inline-block;
+                                background-image: url(../images/pencil.png);
+                                background-size: 80%;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                padding: 20px;
+                            }
                         }
                     }
                     .descriptionRight{
@@ -135,6 +164,7 @@ main{
                         height: 100%;
                         .completionYear{font-size: 1.125rem;}
                         .worksLink{
+                            animation: jump 0.6s infinite alternate;
                             font-size: 1.25rem;
                         }
                     }

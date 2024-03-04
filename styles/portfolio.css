@@ -105,6 +105,7 @@ main .works .workList li .worksDescription {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 main .works .workList li .worksDescription .descriptionLeft {
   display: flex;
@@ -116,16 +117,43 @@ main .works .workList li .worksDescription .descriptionLeft .completionDate {
   font-size: 3rem;
 }
 main .works .workList li .worksDescription .descriptionLeft .skillInfo {
-  font-size: 0.938rem;
   font-weight: lighter;
   font-weight: 500;
 }
-main .works .workList li .worksDescription .descriptionLeft .skillInfo em {
+main .works .workList li .worksDescription .descriptionLeft .skillInfo p {
+  line-height: 1.5;
+}
+main .works .workList li .worksDescription .descriptionLeft .skillInfo p em {
   font-weight: 600;
-  line-height: 2rem;
+  font-size: 0.938rem;
+}
+main .works .workList li .worksDescription .descriptionLeft .skillInfo p .gitLink {
+  margin-left: 10px;
+  font-size: 1.125rem;
+  position: relative;
+  display: inline-block;
+  background-image: url(../images/pencil.png);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+}
+main .works .workList li .worksDescription .descriptionLeft .skillInfo .devInfo {
+  margin-top: 10px;
+  font-size: 0.938rem;
 }
 main .works .workList li .worksDescription .descriptionLeft .worksTitle {
   font-size: 4.375rem;
+}
+main .works .workList li .worksDescription .descriptionLeft .worksTitle .gitLink {
+  font-size: 1rem;
+  position: relative;
+  display: inline-block;
+  background-image: url(../images/pencil.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
 }
 main .works .workList li .worksDescription .descriptionRight {
   text-align: right;
@@ -138,6 +166,7 @@ main .works .workList li .worksDescription .descriptionRight .completionYear {
   font-size: 1.125rem;
 }
 main .works .workList li .worksDescription .descriptionRight .worksLink {
+  animation: jump 0.6s infinite alternate;
   font-size: 1.25rem;
 }
 main .contact {
