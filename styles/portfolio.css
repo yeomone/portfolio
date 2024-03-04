@@ -1,6 +1,7 @@
 html, body {
   background-color: #F5F5F5;
   -webkit-scrollbar: none;
+  overflow-x: hidden;
 }
 
 main section {
@@ -86,6 +87,7 @@ main .works .workList li {
   display: flex;
   justify-content: space-between;
   gap: 30px;
+  overflow: hidden;
   width: calc(100vw - 0px);
   margin-right: 50px;
 }

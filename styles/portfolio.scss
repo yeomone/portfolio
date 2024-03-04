@@ -3,7 +3,7 @@
 html, body {
     background-color: #F5F5F5;
     -webkit-scrollbar:none;
-    // overflow: hidden;
+    overflow-x: hidden;
 }
 main{
     section{padding: 30px;}
@@ -77,6 +77,7 @@ main{
                 display: flex;
                 justify-content: space-between;
                 gap: 30px;
+                overflow: hidden;
                 width: calc(100vw - 0px);
                 margin-right: 50px;
                 &:last-child{margin-right: 0}
