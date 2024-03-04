@@ -75,6 +75,8 @@ main .works .workList {
   flex-flow: row nowrap;
   justify-content: left;
   border-bottom: 2px solid #222;
+  width: -moz-max-content;
+  width: max-content;
 }
 main .works .workList * {
   font-family: hoves;
@@ -84,7 +86,7 @@ main .works .workList li {
   display: flex;
   justify-content: space-between;
   gap: 30px;
-  width: 100vw;
+  width: calc(100vw - 70px);
   margin-right: 50px;
 }
 main .works .workList li:last-child {
