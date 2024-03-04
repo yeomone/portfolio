@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./styles/mouse.css">
     <link rel="stylesheet" href="./styles/portfolio.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"></script>
     <style>
         /* font-face */
         @font-face {
@@ -26,7 +28,7 @@
 </head>
 <body>
     <div class="mouse"><img src="./images/mouse.png" alt=""></div>
-    <main class="wrap">
+    <main class="container">
         <section class="intro">
             <h1>FRONT-END DEVELOPER</h1>
             <div class="mainTitle"><p>2024 front-end portfolio 2024 front-end portfolio 2024 front-end portfolio 2024 front-end portfolio 2024 front-end portfolio</p></div>
@@ -50,6 +52,7 @@
                     <div class="contactWrap">
                         <div class="profile">
                             <!-- 연락처 추가 -->
+                            <p>염 원</p>
                             <p>2000 · 06 · 27</p>
                             <p>kakao ID : duaone</p>
                             <p>duaoneg@gmail.com</p>
@@ -63,9 +66,9 @@
                     </div>
                 </div>
         </section>
-        <section class="works">
+        <section class="works" id="sectionPin">
             <h2>Works</h2>
-            <ul class="workList">
+            <ul class="pin-wrap workList">
                 <li>
                     <div class="worksDescription">
                         <div class="descriptionLeft">
@@ -107,5 +110,60 @@
     </main>
 
     <script src="./script/portfolio.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const pageContainer = document.querySelector(".container");
+
+        /* SMOOTH SCROLL */
+        const scroller = new LocomotiveScroll({
+            el: pageContainer,
+            smooth: true
+        });
+
+        scroller.on("scroll", ScrollTrigger.update);
+
+        ScrollTrigger.scrollerProxy(pageContainer, {
+            scrollTop(value) {
+                return arguments.length
+                    ? scroller.scrollTo(value, 0, 0)
+                    : scroller.scroll.instance.scroll.y;
+            },
+            getBoundingClientRect() {
+                return {
+                    left: 0,
+                    top: 0,
+                    width: window.innerWidth,
+                    height: window.innerHeight
+                };
+            },
+            pinType: pageContainer.style.transform ? "transform" : "fixed"
+        });
+
+        window.addEventListener("load", function () {
+            let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+            let pinWrap = document.querySelector(".pin-wrap");
+            let pinWrapWidth = pinWrap.offsetWidth;
+            let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+
+            gsap.to(".pin-wrap", {
+                scrollTrigger: {
+                    scroller: pageContainer, //locomotive-scroll
+                    scrub: true,
+                    trigger: "#sectionPin",
+                    pin: true,
+                    // pin: false,
+                    start: "top top",
+                    end: pinWrapWidth
+                },
+                x: -horizontalScrollLength,
+                ease: "none"
+            });
+
+            ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+            ScrollTrigger.refresh();
+        });
+    </script>
 </body>
 </html>

@@ -86,7 +86,7 @@ main .works .workList li {
   display: flex;
   justify-content: space-between;
   gap: 30px;
-  width: calc(100vw - 70px);
+  width: calc(100vw - 0px);
   margin-right: 50px;
 }
 main .works .workList li:last-child {
@@ -131,11 +131,4 @@ main .works .workList li .worksDescription .descriptionRight .completionYear {
 }
 main .works .workList li .worksDescription .descriptionRight .worksLink {
   font-size: 1.25rem;
-}
-main .contact {
-  padding-top: 0;
-}
-main .contact h2 {
-  font-size: 5rem;
-  margin-bottom: 30px;
 }/*# sourceMappingURL=portfolio.css.map */
