@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="./styles/animation.css">
     <link rel="stylesheet" href="./styles/mouse.css">
     <link rel="stylesheet" href="./styles/portfolio.css">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"></script> -->
     <style>
         /* font-face */
         @font-face {
@@ -32,11 +32,11 @@
         <section class="intro">
             <h1>FRONT-END DEVELOPER</h1>
             <div class="mainTitle"><p>2024 front-end portfolio 2024 front-end portfolio 2024 front-end portfolio 2024 front-end portfolio 2024 front-end portfolio</p></div>
-            <nav class="name">
-                <a href="#">염 원</a>
-                <a href="#">YEOM WON</a>
-                <a href="#">廉 願</a>
-            </nav>
+            <div class="name">
+                <p>염 원</p>
+                <p>YEOM WON</p>
+                <p>廉 願</p>
+            </div>
             <div class="introContents">
                 <div class="mySkills">
                     <h2>Skills</h2>
@@ -47,15 +47,15 @@
                     <p>illustrator</p>
                     <!-- 기술 추가 -->
                 </div>
-                <div class="contact">
-                    <h2>contact</h2>
+                <div class="profileContainer">
+                    <h2>profile</h2>
                     <div class="contactWrap">
                         <div class="profile">
                             <!-- 연락처 추가 -->
                             <p>염 원</p>
                             <p>2000 · 06 · 27</p>
-                            <p>kakao ID : duaone</p>
-                            <p>duaoneg@gmail.com</p>
+                            <p><a href="#">kakao ID : duaone</a></p>
+                            <p><a href="mailto:duaoneg@gmail.com">duaoneg@gmail.com</a></p>
                         </div>
                         <div class="myPage">
                             <!-- 사이트 추가 -->
@@ -94,7 +94,7 @@
                             <p class="completionDate">~ ing</p>
                             <p class="skillInfo">
                                 <em>사용 스킬: HTML, CSS, Javascript, Jquery(fullPage, Swiper)</em><br>
-                                준비중준비중준비중준비중
+                                미완성 준비중
                             </p>
                             <p class="worksTitle">A twosome place Clone coding</p>
                         </div>
@@ -107,10 +107,21 @@
                 </li>
             </ul>
         </section>
+        <section class="contact">
+            <h2>Contact</h2>
+            <div class="contactContainer">
+                <p class="imgContainer"><img src="./images/kakaoQRCode.png" alt=""></p>
+                <div class="emailContact">
+                    <p>🖜 kakao QR Code</p>
+                    <P>✉ NAVER : <a href="mailto:duaone@naver.com">duaone@naver.com</a></P>
+                    <P>✉ Google : <a href="mailto:duaoneg@gmail.com">duaoneg@gmail.com</a></P>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="./script/portfolio.js"></script>
-    <script>
+    <!-- <script>
         gsap.registerPlugin(ScrollTrigger);
 
         const pageContainer = document.querySelector(".container");
@@ -164,6 +175,6 @@
 
             ScrollTrigger.refresh();
         });
-    </script>
+    </script> -->
 </body>
 </html>
