@@ -2,25 +2,17 @@ const mouse = document.querySelector('.mouse')
 const introContents = document.querySelector('.introContents')
 const contact = document.querySelector('.contact')
 const image = document.querySelector('.mouse img'); // 이미지 요소 선택
-const popUpWrap = document.querySelector('.popUpWrap')
 const worksLink = document.querySelectorAll('.worksLink')
+const pp = document.querySelectorAll('.pp')
 
-console.log(worksLink)
+// 준비중입니다
+worksLink[1].addEventListener('click',()=>{
+    alert('준비중입니다😅')
+})
+pp[1].addEventListener('click',()=>{
+    alert('준비중입니다😅')
+})
 
-// 준비중인 요소 클릭 시 팝업
-worksLink[1].addEventListener('click', (event) => {
-    // 클릭한 위치의 X, Y 좌표를 가져옵니다.
-    const clickX = event.clientX;
-    const clickY = event.clientY;
-    
-    // 팝업의 위치를 클릭한 위치로 설정합니다.
-    popUpWrap.style.position = 'fixed';
-    popUpWrap.style.left = clickX + 'px';
-    popUpWrap.style.top = clickY + 'px';
-    
-    // 팝업을 보이도록 설정합니다.
-    popUpWrap.style.display = 'flex';
-});
 
 // 마우스 커서 모양 바꾸기
 window.addEventListener('mousemove',(e)=>{
