@@ -5,6 +5,33 @@ html ::-webkit-scrollbar, body ::-webkit-scrollbar {
   display: none;
 }
 
+.popUpWrap {
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.popUpWrap .popUpContent {
+  background-color: #fff;
+  width: 15vw;
+  height: 15vh;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-family: Noto Sans KR;
+  border-radius: 5px;
+}
+
 main section {
   padding: 30px;
 }
@@ -115,11 +142,16 @@ main .works .workList li .worksDescription .descriptionLeft {
   height: 100%;
 }
 main .works .workList li .worksDescription .descriptionLeft .completionDate {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 main .works .workList li .worksDescription .descriptionLeft .skillInfo {
   font-weight: lighter;
   font-weight: 500;
+  /* .devInfo{
+      margin-top: 10px;
+      font-size: 0.938rem;
+  } */
 }
 main .works .workList li .worksDescription .descriptionLeft .skillInfo p {
   line-height: 1.5;
@@ -139,12 +171,9 @@ main .works .workList li .worksDescription .descriptionLeft .skillInfo p .gitLin
   background-position: center;
   padding: 20px;
 }
-main .works .workList li .worksDescription .descriptionLeft .skillInfo .devInfo {
-  margin-top: 10px;
-  font-size: 0.938rem;
-}
 main .works .workList li .worksDescription .descriptionLeft .worksTitle {
-  font-size: 4.375rem;
+  font-size: 3rem;
+  font-weight: bold;
 }
 main .works .workList li .worksDescription .descriptionLeft .worksTitle .gitLink {
   font-size: 1rem;
@@ -155,6 +184,36 @@ main .works .workList li .worksDescription .descriptionLeft .worksTitle .gitLink
   background-repeat: no-repeat;
   background-position: center;
   padding: 20px;
+}
+main .works .workList li .worksDescription .descriptionLeft .pp {
+  display: block;
+  /* span{
+      font-size: 4rem;
+      font-weight: 900;
+      font-family: Noto Sans KR;
+      -webkit-text-stroke: 1px #222;
+      // text-shadow: 4px 5px 0 rgba(0, 0, 0, 0.5);
+      background: linear-gradient(to right,yellow, rgba(0,0,0,0) 10%, yellow);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      background-repeat: no-repeat;
+      background-size: 300% 100%;
+      transition: background-position 0.5s linear;
+      &:hover{background-position-x: 100%;}
+  } */
+}
+main .works .workList li .worksDescription .descriptionLeft .pp span {
+  font-size: 4rem;
+  font-weight: 900;
+  font-family: Noto Sans KR;
+  -webkit-text-stroke: 1px #222;
+  color: transparent;
+  color: #F5F5F5;
+  text-shadow: 4px 5px 0 rgba(0, 0, 0, 0.5);
+}
+main .works .workList li .worksDescription .descriptionLeft .pp span:hover {
+  color: yellow;
 }
 main .works .workList li .worksDescription .descriptionRight {
   text-align: right;
@@ -167,8 +226,13 @@ main .works .workList li .worksDescription .descriptionRight .completionYear {
   font-size: 1.125rem;
 }
 main .works .workList li .worksDescription .descriptionRight .worksLink {
+  text-shadow: 3px 1px 0 rgb(255, 255, 0);
   animation: jump 0.6s infinite alternate;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  font-weight: 900;
+}
+main .works .workList li .worksDescription .descriptionRight .worksLink:hover {
+  text-shadow: 3px 1px 0 rgb(255, 0, 0);
 }
 main .contact {
   background-color: #222;
