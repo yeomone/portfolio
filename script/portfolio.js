@@ -6,13 +6,9 @@ const worksLink = document.querySelectorAll('.worksLink')
 const pp = document.querySelectorAll('.pp')
 
 // 준비중입니다
-worksLink[1].addEventListener('click',()=>{
-    alert('준비중입니다😅')
-})
 pp[1].addEventListener('click',()=>{
     alert('준비중입니다😅')
 })
-
 
 // 마우스 커서 모양 바꾸기
 window.addEventListener('mousemove',(e)=>{
